@@ -1,7 +1,7 @@
 # PyJak(py.hæk)
 ## _Script Kiddie hacking_
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.org/microsoft/node-diagnostic-channel.svg?branch=master&amp;status=errored)](https://travis-ci.org/joemccann/dillinger)
 
 Code created by a cybersecurity amateur and scrip kitty by trade.
 
