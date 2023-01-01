@@ -28,11 +28,15 @@ Please enter your choice: """)
         print("Please try again")
         pingmain(1)
 
+
+
+###########################################################################################
+
 def bynet():
     os.system('clear')
     f = Figlet(font='standard')
     print(f.renderText('Ping IP'))
-    IP = input("[+] Enter the Host IP Address:\t")
+    IP = input("Enter the Host IP Address:\t")
     ipnetpar = IP.split('.')
     IPs=IP
 
@@ -51,7 +55,7 @@ def bynet():
     if ipsub == '28':
         end = start + 14
         if end < 255:
-         hosts = str(ipnetpar[0])+'.'+str(ipnetpar[1])+'.'+str(ipnetpar[2])+'.'+str(end)
+         hosts = str(ipnetpar[0])+'.'+str(ipnetpar[1])+'.'+str(ipnetpar[2])+'.'+str(end-1)
     print("Starting Ping Sweeper on " + IPs + " To " + hosts)
 
     for i in range(start, end):
@@ -62,17 +66,15 @@ def bynet():
            print(host + ' is live')
         except:
             dead = dead + 1
-            print(host)
+            print(host + ' is down')
     print(str(live) + ' host are up and ' + str(dead) +' host are down')
+    print ("Totals IPs Scaned: "+str(live+dead))
     input("Press Any Key to Continue...")
     pingmain(0)
 
 
 
-
-
-
-
+###########################################################################################
 
 def selected():
     os.system('clear')
