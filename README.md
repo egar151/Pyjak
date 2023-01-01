@@ -10,21 +10,21 @@ The purpose of this code is to automate the audit and pentest process. The code 
 Questions or suggestions, feel free to drop them in the toilet to be read by someone who cares. Just kidding, feel free to contact me at the information below.
 
 ## What is under the hood?
-- Ping
+Ping
 
-Ping All IPs of Subnets
+- Ping All IPs of Subnets
 
-Ping Specific Host 
+- Ping Specific Host 
 
-- Port Scanning
+Port Scanning
 
-Hot Port Scanning by Host
+- Hot Port Scanning by Host
 
 
 ## Contact me
 You can contact me via 
 - email: eduardo.garcia151@gmail.com
-- Webpage: eduardogarciaruiz.com
+- Webpage: https://eduardogarciaruiz.com
 - linkedin: https://pr.linkedin.com/in/eduardo-garcia-ruiz
 
 
