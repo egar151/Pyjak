@@ -2,7 +2,7 @@ from pyfiglet import Figlet
 import sys
 import os
 import pingss
-
+import portscan
 
 #Title for App
 f = Figlet(font='standard')
@@ -40,7 +40,8 @@ def ping():
 
 
 def port():
-    print('Port')
+    portscan.portmain()
+    backmenu()
 
 def backmenu():
     os.system('clear')

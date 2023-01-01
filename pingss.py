@@ -51,24 +51,36 @@ def bynet():
     start = int(ipnetpar[3])
     end = 1
     hosts='a'
-    
+    hostlist = []
+
     if ipsub == '28':
         end = start + 14
         if end < 255:
          hosts = str(ipnetpar[0])+'.'+str(ipnetpar[1])+'.'+str(ipnetpar[2])+'.'+str(end-1)
+
+    if ipsub == '24':
+        end = start + 254
+        if end <= 255:
+         hosts = str(ipnetpar[0])+'.'+str(ipnetpar[1])+'.'+str(ipnetpar[2])+'.'+str(end-1)
+
     print("Starting Ping Sweeper on " + IPs + " To " + hosts)
 
     for i in range(start, end):
         host = IP + str(i)
         try:
            response = subprocess.check_output(['ping', '-c 1', '-W 1' , host]) 
-           live = live + 1
            print(host + ' is live')
+           hostlist.insert(live,host)
+           live = live + 1
         except:
             dead = dead + 1
             print(host + ' is down')
     print(str(live) + ' host are up and ' + str(dead) +' host are down')
     print ("Totals IPs Scaned: "+str(live+dead))
+    print("Live IPs")
+    for ipss in hostlist:
+        print(ipss) 
+    print()
     input("Press Any Key to Continue...")
     pingmain(0)
 
