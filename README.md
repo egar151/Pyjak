@@ -11,10 +11,10 @@ Questions or suggestions, feel free to drop them in the toilet to be read by som
 
 ## What is under the hood?
 - Ping
-_Ping All IPs of Subnets
--- Ping Specific Host
+-   Ping All IPs of Subnets
+-   Ping Specific Host
 - Port Scanning
-_Hot Port Scanning by Host
+-   Hot Port Scanning by Host
 
 ## Contact me
 You can contact me via 
