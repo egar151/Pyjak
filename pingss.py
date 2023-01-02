@@ -1,6 +1,7 @@
 import subprocess
 from pyfiglet import Figlet
 import os
+import portscan
 
 
 def pingmain(stat):
@@ -12,7 +13,8 @@ def pingmain(stat):
         print()   
     print("""
 A: All
-B: Specific 
+B: Specific
+C: Ping Scan and Port on Live 
 Q: Back to Main Menu""")
     choice = input("""
 Please enter your choice: """)
@@ -21,6 +23,8 @@ Please enter your choice: """)
         bynet()
     elif choice == "B" or choice =="b":
         selected()
+    elif choice == "C" or choice == "c":
+        bynet(1)
     elif choice=="Q" or choice=="q":
         print("Bye")
     else:
@@ -32,7 +36,7 @@ Please enter your choice: """)
 
 ###########################################################################################
 
-def bynet():
+def bynet(y=0):
     os.system('clear')
     f = Figlet(font='standard')
     print(f.renderText('Ping IP'))
@@ -82,6 +86,8 @@ def bynet():
         print(ipss) 
     print()
     input("Press Any Key to Continue...")
+    if y == 1:
+        portscan.portmain(hostlist)
     pingmain(0)
 
 

@@ -18,12 +18,50 @@ def menu():
     choice = input("""
 A: Ping
 B: Port Scan
+C: Tests
 Q: Exit
 
 Please enter your choice: """)
 
     if choice == "A" or choice =="a":
-        ping()
+        os.system('clear')
+        pingss.pingmain(0)
+    elif choice == "B" or choice =="b":
+        portscan.portmain()
+    elif choice == "c" or choice =="C":
+        submenu()
+    elif choice=="Q" or choice=="q":
+        quit()
+    else:
+        print("You must only select either A or B")
+        print("Please try again")
+        menu()
+    backmenu()
+    
+def backmenu():
+    os.system('clear')
+    print(f.renderText('--PyJak--'))
+    menu()
+
+
+def submenu():
+    f = Figlet(font='standard')
+    os.system('clear')
+    print("*" * 70)
+    print(f.renderText('Tests Functions'))
+    print("*" * 70)
+    choice = input("""
+A: Test Open Port
+Q: Exit
+
+Please enter your choice: """)
+
+    if choice == "A" or choice =="a":
+        iput = input("Enter Host IP: ")
+        ip = [iput]
+        port = int(input('Input Port: '))
+        portscan.portmain(ip,port)
+        backmenu()
     elif choice == "B" or choice =="b":
         port()
     elif choice=="Q" or choice=="q":
@@ -31,21 +69,6 @@ Please enter your choice: """)
     else:
         print("You must only select either A or B")
         print("Please try again")
-        menu()
-
-def ping():
-    os.system('clear')
-    pingss.pingmain(0)
-    backmenu()
-
-
-def port():
-    portscan.portmain()
-    backmenu()
-
-def backmenu():
-    os.system('clear')
-    print(f.renderText('--PyJak--'))
-    menu()
+        menu() 
 
 main()
