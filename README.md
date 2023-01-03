@@ -1,4 +1,4 @@
-# PyJak(py.hæk)
+# PyJak(Py.hæk)
 ## _Script Kiddie hacking_
 
 [![Build Status](https://travis-ci.org/microsoft/node-diagnostic-channel.svg?branch=master&amp;status=errored)](https://travis-ci.org/joemccann/dillinger)
@@ -15,6 +15,8 @@ Ping
 - Ping All IPs of Subnets
 
 - Ping Specific Host 
+
+- Ping Subnet and Port Scan live Host
 
 Port Scanning
 

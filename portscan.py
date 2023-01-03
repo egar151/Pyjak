@@ -11,6 +11,7 @@ def portmain(ips=['None'],port=666):
     subprocess.call('clear')
     f = Figlet(font='standard') 
     print(f.renderText('Port Scanner'))
+    print('Enter Q to Exit')
     if port != 666:
         print("_" * 60)
         print ("Please wait, scanning remote host", ips[0], ' on port ' , port)
@@ -29,6 +30,9 @@ def portmain(ips=['None'],port=666):
     else:
         if ips[0] == 'None':
             ips[0] = input("Enter a remote host to scan: ")
+            if ips[0].upper() == 'Q':
+                ips[0] = 'None'
+                return
         else:
             print("Port Scaning the following Host: ")
             for i in range(len(ips)):

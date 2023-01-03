@@ -8,7 +8,7 @@ import portscan
 f = Figlet(font='standard')
 os.system('clear')
 print("***************************************************")
-print(f.renderText('--PyJak--'))
+print(f.renderText('          PyJak  '))
 
 def main():
    menu()
@@ -31,6 +31,11 @@ Please enter your choice: """)
     elif choice == "c" or choice =="C":
         submenu()
     elif choice=="Q" or choice=="q":
+        os.system('clear')
+        print("*" * 80)
+        p = Figlet(font='nancyj')
+        print(p.renderText('GOODBYE'))
+        print("*" * 80)
         quit()
     else:
         print("You must only select either A or B")
