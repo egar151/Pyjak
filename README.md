@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/microsoft/node-diagnostic-channel.svg?branch=master&amp;status=errored)](https://travis-ci.org/joemccann/dillinger)
 
-Code created by a cybersecurity amateur and scrip kitty by trade.
+Code created by a cybersecurity amateur and script kitty by trade.
 
 The purpose of this code is to automate the audit and pentest process. The code will be revised and updated as time permits.
 
