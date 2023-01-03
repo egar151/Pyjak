@@ -9,7 +9,7 @@ The purpose of this code is to automate the audit and pentest process. The code 
 
 Questions or suggestions, feel free to drop them in the toilet to be read by someone who cares. Just kidding, feel free to contact me at the information below.
 
-## What is under the hood?
+## What's under the hood?
 Ping
 
 - Ping All IPs of Subnets
